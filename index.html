@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Verdansk Easter Egg Helper</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body style="background-color: black">
+
+  <img id="map" src="./img/Verdansk.png"/>
+
+  <!--
+
+  <div style="position: fixed; left: 0; top: 0; margin: 25px;">
+
+      <button class="btn btn-warning">1</button>
+      <button class="btn btn-primary">1</button>
+<br>
+<br>
+      <button class="btn btn-warning">2</button>
+      <button class="btn btn-primary">2</button>
+<br>
+<br>
+      <button class="btn btn-warning">3</button>
+      <button class="btn btn-primary">3</button>
+<br>
+<br>
+      <button class="btn btn-warning">4</button>
+      <button class="btn btn-primary">4</button>
+<br>
+<br>
+      <button class="btn btn-warning">5</button>
+      <button class="btn btn-primary">5</button>
+<br>
+<br>
+      <button class="btn btn-warning">6</button>
+      <button class="btn btn-primary">6</button>
+<br>
+<br>
+      <button class="btn btn-warning">7</button>
+      <button class="btn btn-primary">7</button>
+<br>
+<br>
+      <button class="btn btn-warning">8</button>
+      <button class="btn btn-primary">8</button>
+<br>
+<br>
+      <button class="btn btn-warning">9</button>
+      <button class="btn btn-primary">9</button>
+
+  </div>
+
+  -->
+
+  <div style="position: fixed; left: 0; top: 0px; margin: 25px;">
+
+    <audio controls="controls" id="audioPlayer">
+
+      <source src="audio/0.mp3" type="audio/mp3">
+
+    </audio>
+
+<br>
+<br>
+
+    <button class="btn btn-outline-light" onclick="playAudio(0)">0</button>
+    <span style="color: white;"> - nol</span>
+    <br>
+    <br>
+
+    <button class="btn btn-outline-light" onclick="playAudio(1)">1</button>
+    <span style="color: white;"> - beh-diem</span>
+    <br>
+    <br>
+
+    <button class="btn btn-outline-light" onclick="playAudio(2)">2</button>
+    <span style="color: white;"> - doo-ah</span>
+
+    <br>
+    <br>
+    <button class="btn btn-outline-light" onclick="playAudio(3)">3</button>
+    <span style="color: white;"> - tree</span>
+    <br>
+    <br>
+
+    <button class="btn btn-outline-light" onclick="playAudio(4)">4</button>
+    <span style="color: white;"> - zeh-deal-ya</span>
+    <br>
+    <br>
+
+    <button class="btn btn-outline-light" onclick="playAudio(5)">5</button>
+    <span style="color: white;"> - peeyat</span>
+    <br>
+    <br>
+
+
+    <button class="btn btn-outline-light" onclick="playAudio(6)">6</button>
+    <span style="color: white;"> - seht</span>
+
+    <br>
+    <br>
+    <button class="btn btn-outline-light" onclick="playAudio(7)">7</button>
+    <span style="color: white;"> - see-yem</span>
+
+    <br>
+    <br>
+    <button class="btn btn-outline-light" onclick="playAudio(8)">8</button>
+    <span style="color: white;"> - poy-sem</span>
+    <br>
+    <br>
+
+    <button class="btn btn-outline-light" onclick="playAudio(9)">9</button>
+    <span style="color: white;"> - dairy</span>
+
+  </div>
+
+  <div style="position: fixed; margin: 0 auto; left: 50%; width: 100%; align-items: center;">
+    <span style="width: 25%; color: white;">by DestrucSean</span>
+  </div>
+
+<!--  <button style="position: fixed; left: 700px; top: 200px;" class="btn btn-warning">9</button>-->
+
+  <script>
+
+    function playAudio(num) {
+      var audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.setAttribute('src', 'audio/' + num.toString() + '.mp3');
+      audioPlayer.play();
+    }
+
+  </script>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+<!--<video controls src="vid/WARZONE%20EASTER%20EGG%20-%20RUSSIAN%20PHONE%20TRANSLATIONS%20NUMBERS%200-9%20FOR%20BUNKER%2011%20AND%20MUD%20DRAUBER%20BLUEPRINT%20(3).mp4">Video Not Supported</video>-->
+
+</body>
+
+</html>
