@@ -107,14 +107,6 @@
       </div>
     </div>
 
-    <audio controls="controls" id="audioPlayer">
-
-      <source src="audio/0.mp3" type="audio/mp3">
-
-    </audio>
-
-    <br>
-    <br>
 
     <button class="btn btn-outline-light" onclick="playAudio(0)">0</button>
     <span style="color: white;"> - nol</span>
@@ -164,6 +156,15 @@
 
     <button class="btn btn-outline-light" onclick="playAudio(9)">9</button>
     <span style="color: white;"> - dairy</span>
+
+    <br>
+    <br>
+
+    <audio controls controlsList="nodownload" id="audioPlayer">
+
+      <source src="audio/0.mp3" type="audio/mp3">
+
+    </audio>
 
   </div>
 
