@@ -19,55 +19,16 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.css">
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+  <script src="js/plugins.js"></script>
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body style="background-color: black">
+<body style="background-color: black" onload="notify('Appreciate this?', 'Support me through Steam and buy my game!', 'https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/', 'Lights, Camera, Reaction!')">
 
 <img id="map" src="img/bunker11.png"/>
-
-<!--
-
-<div style="position: fixed; left: 0; top: 0; margin: 25px;">
-
-    <button class="btn btn-warning">1</button>
-    <button class="btn btn-primary">1</button>
-<br>
-<br>
-    <button class="btn btn-warning">2</button>
-    <button class="btn btn-primary">2</button>
-<br>
-<br>
-    <button class="btn btn-warning">3</button>
-    <button class="btn btn-primary">3</button>
-<br>
-<br>
-    <button class="btn btn-warning">4</button>
-    <button class="btn btn-primary">4</button>
-<br>
-<br>
-    <button class="btn btn-warning">5</button>
-    <button class="btn btn-primary">5</button>
-<br>
-<br>
-    <button class="btn btn-warning">6</button>
-    <button class="btn btn-primary">6</button>
-<br>
-<br>
-    <button class="btn btn-warning">7</button>
-    <button class="btn btn-primary">7</button>
-<br>
-<br>
-    <button class="btn btn-warning">8</button>
-    <button class="btn btn-primary">8</button>
-<br>
-<br>
-    <button class="btn btn-warning">9</button>
-    <button class="btn btn-primary">9</button>
-
-</div>
-
--->
 
 <div style="position: fixed; left: 0; top: 0px; margin: 25px;">
 
@@ -209,10 +170,21 @@
 <div style="position: fixed; left: 25px;">
   <span style="color: white;">by DestrucSean</span>
   <br>
-  <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank" style="color: yellow;">Get Lights, Camera, Reaction! on Steam</a>
+  <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank" style="color: yellow;" onclick="notify('Thanks :)', 'Happy Easter Egg Hunting!')">Get Lights, Camera, Reaction! on Steam</a>
 </div>
 
-<!--  <button style="position: fixed; left: 700px; top: 200px;" class="btn btn-warning">9</button>-->
+<div id="notify" style="position: fixed; right: 0; top: 0; margin: 25px;" hidden class="alert alert-dark" role="alert">
+
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('notify').setAttribute('hidden', hidden)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+  <div id="notifyBold" style="font-weight: bold;"></div>
+  <div id="notifyText1"></div>
+  <a id="notifyLink" href="" target="_blank"></a>
+  <div id="notifyText2"></div>
+
+</div>
 
 <script>
 
@@ -236,13 +208,20 @@
     bkg.setAttribute('src', mapBkg);
   }
 
+  function notify (msgBold, msgText1, msgLinkUrl, msgLinkText, msgText2) {
+    document.getElementById('notify').removeAttribute('hidden');
+    document.getElementById('notifyBold').textContent = msgBold;
+    document.getElementById('notifyText1').textContent = msgText1;
+    document.getElementById('notifyLink').setAttribute('href', msgLinkUrl);
+    document.getElementById('notifyLink').textContent = msgLinkText;
+    document.getElementById('notifyText2').textContent = msgText2;
+  }
+
 </script>
 
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
-<!--<video controls src="vid/WARZONE%20EASTER%20EGG%20-%20RUSSIAN%20PHONE%20TRANSLATIONS%20NUMBERS%200-9%20FOR%20BUNKER%2011%20AND%20MUD%20DRAUBER%20BLUEPRINT%20(3).mp4">Video Not Supported</video>-->
 
 </body>
 
