@@ -48,6 +48,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="setMap(document.getElementById('redCards'), 'img/red-cards.png')">Red Access Cards</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="setMap(document.getElementById('computers'), 'img/computers.png')">Computer Passwords</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -165,6 +168,23 @@
 
   </div>
 
+  <div id="computers" style="display: none;">
+
+    <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+      <h5 class="card-header">Computers</h5>
+      <div class="card-body">
+        <p class="card-text">Easter egg is currently unsolved</p>
+        <ul>
+          <li class="card-text">Locate the computers around the map</li>
+          <li class="card-text">Interact with them to "Enter Password"</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>
+
   </div>
 
 <div style="position: fixed; left: 25px;">
@@ -198,11 +218,13 @@
     var bunkers11 = document.getElementById('bunker11');
     var keypads = document.getElementById('keypads');
     var redCards = document.getElementById('redCards');
+    var computers = document.getElementById('computers');
     var bkg = document.getElementById('map');
 
     bunkers11.style.display = 'none';
     keypads.style.display = 'none';
     redCards.style.display = 'none';
+    computers.style.display = 'none';
 
     map.style.display = "block";
     bkg.setAttribute('src', mapBkg);
