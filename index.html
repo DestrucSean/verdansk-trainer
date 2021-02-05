@@ -16,6 +16,9 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.css">
 
@@ -28,7 +31,7 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body style="background-color: black"
+<body style="background-color: black; min-height: 1440px;"
       onload="notify('Appreciate this?', 'Support me through Steam and buy my game!', 'https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/', 'Lights, Camera, Reaction!')">
 
 <img id="map" src="img/bunker11.png"/>
@@ -248,7 +251,7 @@
       </div>
     </div>
 
-    <div id="secretUnlocker" style="width: 600px; position: fixed; right: 15px; top: 150px; float: right;">
+    <div id="secretUnlocker" style="width: 600px; position: fixed; right: 15px; top: 25px; float: right; padding: 25px; background-color: rgba(0,0,0,.5);" >
 
       <div class="container">
 
@@ -290,25 +293,25 @@
           <h5 style="color: white;">2) Select Adjustment Number Order</h5>
           <div class="row">
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(-3)">-3</span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(-3)">-3</span>
             </div>
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(-2)">-2</span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(-2)">-2</span>
             </div>
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(-1)">-1</span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(-1)">-1</span>
             </div>
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(0)"> 0 </span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(0)"> 0 </span>
             </div>
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(1)">+1</span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(1)">+1</span>
             </div>
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(2)">+2</span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(2)">+2</span>
             </div>
             <div>
-              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(3)">+3</span>
+              <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(3)">+3</span>
             </div>
           </div>
 
@@ -361,12 +364,12 @@
 
         </div>
 
-        <div id="adjHeader" style="color: white; font-size: 20px; margin-bottom: -20px; display: none;">2) Selected Adjustments</div>
+        <div id="adjHeader" style="color: white; font-size: 20px; margin-bottom: -10px; display: none;">2) Selected Adjustments</div>
         <div id="adjOrder" class="row">
 
         </div>
 
-        <div id="numHeader" style="color: white; font-size: 20px; margin-bottom: -20px; display: none;">3) Selected Numbers</div>
+        <div id="numHeader" style="color: white; font-size: 20px; margin-bottom: -10px; display: none;">3) Selected Numbers</div>
         <div id="numOrder" class="row">
 
         </div>
@@ -497,7 +500,7 @@
     }
     var copyImg = document.createElement('img');
     copyImg.src = img;
-    copyImg.height = "125";
+    copyImg.height = "75";
     copyImg.id = "copyImg" + copyImgCount;
     document.getElementById('paintingOrder').appendChild(copyImg);
     console.log("painting added");
@@ -527,11 +530,10 @@
     }
     var copyAdj = document.createElement('div');
     copyAdj.textContent = num;
-    copyAdj.style.fontSize = "50px";
+    copyAdj.style.fontSize = "20px";
     copyAdj.style.color = "white";
     copyAdj.style.margin = "10px";
     copyAdj.id = "copyAdj" + copyAdjCount;
-    copyAdj.setAttribute('onclick', "removeAdj(document.getElementById('" + copyAdj.id + "')");
     document.getElementById('adjOrder').appendChild(copyAdj);
     console.log("adjustment added");
 
@@ -554,11 +556,10 @@
     }
       var copyNum = document.createElement('div');
       copyNum.textContent = num;
-      copyNum.style.fontSize = "50px";
+      copyNum.style.fontSize = "20px";
       copyNum.style.color = "white";
       copyNum.style.margin = "10px";
       copyNum.id = "copyNum" + copyNumCount;
-      copyNum.setAttribute('onclick', "removeNum(document.getElementById('" + copyNum.id + "')");
       document.getElementById('numOrder').appendChild(copyNum);
       console.log("num added");
 
@@ -578,9 +579,29 @@
     codeNum.style.color = "yellow";
     codeNum.style.margin = "10px";
     codeNum.id = "codeNum" + codeCount;
-    codeNum.setAttribute('onclick', "removeNum(document.getElementById('" + codeNum.id + "')");
     document.getElementById('codeOrder').appendChild(codeNum);
     console.log("code num added");
+
+    if (codeCount === 4){
+      var codeNumStrike = document.createElement('del');
+      var codeNumStrikeValue = document.createElement('div');
+      codeNumStrikeValue.textContent = document.getElementById('codeOrder').textContent;
+      codeNumStrike.style.color = "black";
+      codeNumStrike.style.border = "1px solid white";
+      codeNumStrike.id = "codeNumStrike";
+      codeNumStrike.style.textDecoration = "line-through";
+      codeNumStrikeValue.style.fontSize = "50px";
+      codeNumStrikeValue.style.color = "orange";
+      codeNumStrikeValue.style.padding = "10px";
+      codeNumStrikeValue.id = "codeNumStrikeValue";
+      codeNumStrikeValue.style.fontFamily = "'Arimo', sans-serif";
+      document.getElementById('codeOrder').appendChild(codeNumStrike);
+      document.getElementById('codeNumStrike').appendChild(codeNumStrikeValue);
+    } else if (codeCount !== 4) {
+      document.getElementById('codeNumStrike').remove();
+      document.getElementById('codeNumStrikeValue').remove();
+    }
+
   }
 
 </script>
