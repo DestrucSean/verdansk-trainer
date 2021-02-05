@@ -33,7 +33,7 @@
 
 <img id="map" src="img/bunker11.png"/>
 
-<div style="position: fixed; left: 0; top: 0px; margin: 25px;">
+<div style="position: fixed; left: 0; top: 0; margin: 25px;">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Verdansk Easter Egg Trainer</a>
@@ -184,8 +184,12 @@
           <li class="card-text">Interact with the keypad and enter "<strong>2179</strong>"</li>
           <li class="card-text">Interact with the computer</li>
           <li class="card-text">Write down each photo tag (and differential if there)</li>
-          <li class="card-text">Note the Roman Numeral under the painting, then add/subtract the differential to decipher the code</li>
-          <li class="card-text">Interact with the computer again to enter the top halves, then bottom halves of the code</li>
+          <li class="card-text">Note the Roman Numeral under the painting, then add/subtract the differential to
+            decipher the code
+          </li>
+          <li class="card-text">Interact with the computer again to enter the top halves, then bottom halves of the
+            code
+          </li>
           <li class="card-text">Travel to the marked #2 tunnel on the map</li>
           <li class="card-text">Interact with the computer, get on the subway</li>
         </ol>
@@ -193,8 +197,6 @@
     </div>
 
     <br>
-
-    <img src="img/romanNumerals.jpg" height="auto" width="500px" style="border: 1px solid black; position: fixed; right: 0; bottom: 0;"/>
 
     <div id="paintings" style="width: 500px;">
 
@@ -245,72 +247,347 @@
         </div>
       </div>
     </div>
+
+    <div id="secretUnlocker" style="width: 600px; position: fixed; right: 15px; top: 150px; float: right;">
+
+      <div class="container">
+
+        <div class="col">
+
+          <h5 style="color: white;">1) Select Painting Order</h5>
+          <div class="row">
+            <div>
+              <img src="img/btnArch.png" height="125" width="auto" onclick="addPainting('img/btnArch.png')"/>
+            </div>
+            <div>
+              <img src="img/btnBag.png" height="125" width="auto" onclick="addPainting('img/btnBag.png')"/>
+            </div>
+            <div>
+              <img src="img/btnBeard.png" height="125" width="auto" onclick="addPainting('img/btnBeard.png')"/>
+            </div>
+            <div>
+              <img src="img/btnMedal.png" height="125" width="auto" onclick="addPainting('img/btnMedal.png')"/>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <img src="img/btnMonument.png" height="125" width="auto" onclick="addPainting('img/btnMonument.png')"/>
+            </div>
+            <div>
+              <img src="img/btnMountain.png" height="125" width="auto" onclick="addPainting('img/btnMountain.png')"/>
+            </div>
+            <div>
+              <img src="img/btnShoulder.png" height="125" width="auto" onclick="addPainting('img/btnShoulder.png')"/>
+            </div>
+            <div>
+              <img src="img/btnSteeple.png" height="125" width="auto" onclick="addPainting('img/btnSteeple.png')"/>
+            </div>
+          </div>
+
+          <br>
+
+          <h5 style="color: white;">2) Select Adjustment Number Order</h5>
+          <div class="row">
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(-3)">-3</span>
+            </div>
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(-2)">-2</span>
+            </div>
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(-1)">-1</span>
+            </div>
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(0)"> 0 </span>
+            </div>
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(1)">+1</span>
+            </div>
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(2)">+2</span>
+            </div>
+            <div>
+              <span style="font-size: 50px; color: white; margin: 10px;" onclick="addAdj(3)">+3</span>
+            </div>
+          </div>
+
+          <br>
+
+          <h5 style="color: white;">3) Select Roman Numeral Order</h5>
+          <div class="row">
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(1)">I(1)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(2)">II(2)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(3)">III(3)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(4)">IV(4)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(5)">V(5)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(6)">VI(6)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(7)">VII(7)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(8)">VIII(8)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(9)">IX(9)</span>
+            </div>
+            <div>
+              <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(10)">X(10)</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr style="border-top: 1px solid white;">
+
+      <div class="container">
+
+        <div id="imgHeader" style="color: white; font-size: 20px; display: none;">1) Selected Paintings</div>
+        <div id="paintingOrder" class="row">
+
+        </div>
+
+        <div id="adjHeader" style="color: white; font-size: 20px; margin-bottom: -20px; display: none;">2) Selected Adjustments</div>
+        <div id="adjOrder" class="row">
+
+        </div>
+
+        <div id="numHeader" style="color: white; font-size: 20px; margin-bottom: -20px; display: none;">3) Selected Numbers</div>
+        <div id="numOrder" class="row">
+
+        </div>
+
+        <div id="codeHeader" style="color: white; font-size: 20px; margin-bottom: -20px; display: none;">Deciphered Code</div>
+        <div id="codeOrder" class="row">
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <button class="btn btn-warning" onclick="resetSecretStation()">Reset Decoder</button>
+
+    </div>
+
   </div>
 
-  <div style="position: fixed; bottom: 5px; left: 25px;">
-    <span style="color: white;">by DestrucSean</span>
-    <br>
-    <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank"
-       style="color: yellow;" onclick="notify('Thanks :)', 'Happy Easter Egg Hunting!')">Get Lights, Camera,
-      Reaction!
-      on Steam</a>
-  </div>
+</div>
 
-  <div id="notify" style="position: fixed; right: 0; top: 0; margin: 25px;" hidden class="alert alert-dark"
-       role="alert">
+<div style="position: fixed; bottom: 5px; left: 25px;">
+  <span style="color: white;">by DestrucSean</span>
+  <br>
+  <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank"
+     style="color: yellow;" onclick="notify('Thanks :)', 'Happy Easter Egg Hunting!')">Get Lights, Camera,
+    Reaction!
+    on Steam</a>
+</div>
 
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"
-            onclick="document.getElementById('notify').setAttribute('hidden', hidden)">
-      <span aria-hidden="true">&times;</span>
-    </button>
+<div id="notify" style="position: fixed; right: 0; top: 0; margin: 25px;" hidden class="alert alert-dark"
+     role="alert">
 
-    <div id="notifyBold" style="font-weight: bold;"></div>
-    <div id="notifyText1"></div>
-    <a id="notifyLink" href="" target="_blank"></a>
-    <div id="notifyText2"></div>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+          onclick="document.getElementById('notify').setAttribute('hidden', hidden)">
+    <span aria-hidden="true">&times;</span>
+  </button>
 
-  </div>
+  <div id="notifyBold" style="font-weight: bold;"></div>
+  <div id="notifyText1"></div>
+  <a id="notifyLink" href="" target="_blank"></a>
+  <div id="notifyText2"></div>
 
-  <script>
+</div>
 
-    function playAudio(num) {
-      var audioPlayer = document.getElementById('audioPlayer');
-      audioPlayer.setAttribute('src', 'audio/' + num.toString() + '.mp3');
-      audioPlayer.play();
+<script>
+
+  function playAudio(num) {
+    var audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.setAttribute('src', 'audio/' + num.toString() + '.mp3');
+    audioPlayer.play();
+  }
+
+  function setMap(map, mapBkg) {
+    var bunkers11 = document.getElementById('bunker11');
+    var keypads = document.getElementById('keypads');
+    var redCards = document.getElementById('redCards');
+    var computers = document.getElementById('computers');
+    var secretStation = document.getElementById('secretStation');
+    var bkg = document.getElementById('map');
+
+    bunkers11.style.display = 'none';
+    keypads.style.display = 'none';
+    redCards.style.display = 'none';
+    computers.style.display = 'none';
+    secretStation.style.display = 'none';
+
+    map.style.display = "block";
+    bkg.setAttribute('src', mapBkg);
+  }
+
+  function notify(msgBold, msgText1, msgLinkUrl, msgLinkText, msgText2) {
+    document.getElementById('notify').removeAttribute('hidden');
+    document.getElementById('notifyBold').textContent = msgBold;
+    document.getElementById('notifyText1').textContent = msgText1;
+    document.getElementById('notifyLink').setAttribute('href', msgLinkUrl);
+    document.getElementById('notifyLink').textContent = msgLinkText;
+    document.getElementById('notifyText2').textContent = msgText2;
+  }
+
+  var copyImgCount = 0;
+  var copyAdjCount = 0;
+  var codeCount = 0;
+  var copyNumCount = 0;
+
+  function resetSecretStation(){
+    copyImgCount = 0;
+    copyAdjCount = 0;
+    copyNumCount = 0;
+    codeCount = 0;
+
+    var i = 0;
+
+    for (i=0;i<5;i++) {
+      if (document.getElementById('copyImg' + i) !== null) {
+        document.getElementById('copyImg' + i).remove();
+      }
+
+      if (document.getElementById('copyAdj' + i) !== null) {
+        document.getElementById('copyAdj' + i).remove();
+      }
+
+      if (document.getElementById('copyNum' + i) !== null) {
+        document.getElementById('copyNum' + i).remove();
+      }
+
+      if (document.getElementById('codeNum' + i) !== null) {
+        document.getElementById('codeNum' + i).remove();
+      }
+
     }
 
-    function setMap(map, mapBkg) {
-      var bunkers11 = document.getElementById('bunker11');
-      var keypads = document.getElementById('keypads');
-      var redCards = document.getElementById('redCards');
-      var computers = document.getElementById('computers');
-      var secretStation = document.getElementById('secretStation');
-      var bkg = document.getElementById('map');
+    document.getElementById('imgHeader').style.display = "none";
+    document.getElementById('adjHeader').style.display = "none";
+    document.getElementById('numHeader').style.display = "none";
+    document.getElementById('codeHeader').style.display = "none";
+  }
 
-      bunkers11.style.display = 'none';
-      keypads.style.display = 'none';
-      redCards.style.display = 'none';
-      computers.style.display = 'none';
-      secretStation.style.display = 'none';
-
-      map.style.display = "block";
-      bkg.setAttribute('src', mapBkg);
+  function addPainting(img) {
+    document.getElementById('imgHeader').style.display = "block";
+    copyImgCount++;
+    if (copyImgCount > 4) {
+      copyImgCount = 1;
+      document.getElementById('copyImg1').remove();
+      document.getElementById('copyImg2').remove();
+      document.getElementById('copyImg3').remove();
+      document.getElementById('copyImg4').remove();
     }
+    var copyImg = document.createElement('img');
+    copyImg.src = img;
+    copyImg.height = "125";
+    copyImg.id = "copyImg" + copyImgCount;
+    document.getElementById('paintingOrder').appendChild(copyImg);
+    console.log("painting added");
+  }
 
-    function notify(msgBold, msgText1, msgLinkUrl, msgLinkText, msgText2) {
-      document.getElementById('notify').removeAttribute('hidden');
-      document.getElementById('notifyBold').textContent = msgBold;
-      document.getElementById('notifyText1').textContent = msgText1;
-      document.getElementById('notifyLink').setAttribute('href', msgLinkUrl);
-      document.getElementById('notifyLink').textContent = msgLinkText;
-      document.getElementById('notifyText2').textContent = msgText2;
+  function addAdj(num) {
+    document.getElementById('adjHeader').style.display = "block";
+    copyAdjCount++;
+    if (copyAdjCount > 4) {
+      copyAdjCount = 1;
+      document.getElementById('copyAdj1').remove();
+      document.getElementById('copyAdj2').remove();
+      document.getElementById('copyAdj3').remove();
+      document.getElementById('copyAdj4').remove();
+      copyNumCount = 0;
+      codeCount = 0;
+      document.getElementById('copyNum1').remove();
+      document.getElementById('copyNum2').remove();
+      document.getElementById('copyNum3').remove();
+      document.getElementById('copyNum4').remove();
+      document.getElementById('codeNum1').remove();
+      document.getElementById('codeNum2').remove();
+      document.getElementById('codeNum3').remove();
+      document.getElementById('codeNum4').remove();
+      document.getElementById('numHeader').style.display = "none";
+      document.getElementById('codeHeader').style.display = "none";
     }
+    var copyAdj = document.createElement('div');
+    copyAdj.textContent = num;
+    copyAdj.style.fontSize = "50px";
+    copyAdj.style.color = "white";
+    copyAdj.style.margin = "10px";
+    copyAdj.id = "copyAdj" + copyAdjCount;
+    copyAdj.setAttribute('onclick', "removeAdj(document.getElementById('" + copyAdj.id + "')");
+    document.getElementById('adjOrder').appendChild(copyAdj);
+    console.log("adjustment added");
 
-  </script>
+  }
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  function addNum(num) {
+    document.getElementById('numHeader').style.display = "block";
+    copyNumCount++;
+    if (copyNumCount > 4) {
+      copyNumCount = 1;
+      codeCount = 0;
+      document.getElementById('copyNum1').remove();
+      document.getElementById('copyNum2').remove();
+      document.getElementById('copyNum3').remove();
+      document.getElementById('copyNum4').remove();
+      document.getElementById('codeNum1').remove();
+      document.getElementById('codeNum2').remove();
+      document.getElementById('codeNum3').remove();
+      document.getElementById('codeNum4').remove();
+    }
+      var copyNum = document.createElement('div');
+      copyNum.textContent = num;
+      copyNum.style.fontSize = "50px";
+      copyNum.style.color = "white";
+      copyNum.style.margin = "10px";
+      copyNum.id = "copyNum" + copyNumCount;
+      copyNum.setAttribute('onclick', "removeNum(document.getElementById('" + copyNum.id + "')");
+      document.getElementById('numOrder').appendChild(copyNum);
+      console.log("num added");
+
+      var romanNum = parseFloat(document.getElementById(copyNum.id).textContent);
+      var adjNum = parseFloat(document.getElementById('copyAdj' + copyNumCount).textContent);
+
+      getCode(romanNum, adjNum);
+
+  }
+
+  function getCode(romanNum, adjNum) {
+    document.getElementById('codeHeader').style.display = "block";
+    codeCount++;
+    var codeNum = document.createElement('div');
+    codeNum.textContent = (romanNum + adjNum);
+    codeNum.style.fontSize = "50px";
+    codeNum.style.color = "yellow";
+    codeNum.style.margin = "10px";
+    codeNum.id = "codeNum" + codeCount;
+    codeNum.setAttribute('onclick', "removeNum(document.getElementById('" + codeNum.id + "')");
+    document.getElementById('codeOrder').appendChild(codeNum);
+    console.log("code num added");
+  }
+
+</script>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 
