@@ -19,14 +19,17 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.css">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
   <script src="js/plugins.js"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body style="background-color: black" onload="notify('Appreciate this?', 'Support me through Steam and buy my game!', 'https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/', 'Lights, Camera, Reaction!')">
+<body style="background-color: black"
+      onload="notify('Appreciate this?', 'Support me through Steam and buy my game!', 'https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/', 'Lights, Camera, Reaction!')">
 
 <img id="map" src="img/bunker11.png"/>
 
@@ -34,22 +37,30 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Verdansk Easter Egg Trainer</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="setMap(document.getElementById('bunker11'), 'img/bunker11.png')">Bunker 11</a>
+          <a class="nav-link" href="#" onclick="setMap(document.getElementById('bunker11'), 'img/bunker11.png')">Bunker
+            11</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="setMap(document.getElementById('keypads'), 'img/keypad-codes.png')">Keypads</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="setMap(document.getElementById('redCards'), 'img/red-cards.png')">Red Access Cards</a>
+          <a class="nav-link" href="#" onclick="setMap(document.getElementById('redCards'), 'img/red-cards.png')">Red
+            Access Cards</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="setMap(document.getElementById('computers'), 'img/computers.png')">Computer Passwords</a>
+          <a class="nav-link" href="#" onclick="setMap(document.getElementById('computers'), 'img/computers.png')">Computer
+            Passwords</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+             onclick="setMap(document.getElementById('secretStation'), 'img/secretStation.png')">Secret Station</a>
         </li>
       </ul>
     </div>
@@ -59,71 +70,48 @@
 
   <div id="bunker11">
 
-    <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
       <h5 class="card-header">Bunker 11</h5>
       <div class="card-body">
-        <ul>
+        <ol>
           <li class="card-text">Locate the activation phone (blue marks)</li>
           <li class="card-text">Translate the 3-digit Russian code</li>
           <li class="card-text">Activate each phone in the 3-digit sequence (yellow numbers)</li>
           <li class="card-text">Travel to Bunker 11 (yellow mark)</li>
-        </ul>
+        </ol>
       </div>
     </div>
 
-
-    <button class="btn btn-outline-light" onclick="playAudio(0)">0</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(0)">0</button>
     <span style="color: white;"> - nol</span>
     <br>
-    <br>
-
-    <button class="btn btn-outline-light" onclick="playAudio(1)">1</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(1)">1</button>
     <span style="color: white;"> - beh-diem</span>
     <br>
-    <br>
-
-    <button class="btn btn-outline-light" onclick="playAudio(2)">2</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(2)">2</button>
     <span style="color: white;"> - doo-ah</span>
-
     <br>
-    <br>
-    <button class="btn btn-outline-light" onclick="playAudio(3)">3</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(3)">3</button>
     <span style="color: white;"> - tree</span>
     <br>
-    <br>
-
-    <button class="btn btn-outline-light" onclick="playAudio(4)">4</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(4)">4</button>
     <span style="color: white;"> - zeh-deal-ya</span>
     <br>
-    <br>
-
-    <button class="btn btn-outline-light" onclick="playAudio(5)">5</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(5)">5</button>
     <span style="color: white;"> - peeyat</span>
     <br>
-    <br>
-
-
-    <button class="btn btn-outline-light" onclick="playAudio(6)">6</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(6)">6</button>
     <span style="color: white;"> - seht</span>
-
     <br>
-    <br>
-    <button class="btn btn-outline-light" onclick="playAudio(7)">7</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(7)">7</button>
     <span style="color: white;"> - see-yem</span>
-
     <br>
-    <br>
-    <button class="btn btn-outline-light" onclick="playAudio(8)">8</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(8)">8</button>
     <span style="color: white;"> - poy-sem</span>
     <br>
-    <br>
-
-    <button class="btn btn-outline-light" onclick="playAudio(9)">9</button>
+    <button style="margin: 5px;" class="btn btn-outline-light" onclick="playAudio(9)">9</button>
     <span style="color: white;"> - dairy</span>
-
     <br>
-    <br>
-
     <audio controls controlsList="nodownload" id="audioPlayer">
 
       <source src="audio/0.mp3" type="audio/mp3">
@@ -134,13 +122,13 @@
 
   <div id="keypads" style="display: none;">
 
-    <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
       <h5 class="card-header">Keypads</h5>
       <div class="card-body">
-        <ul>
-        <li class="card-text">Locate each bunker keypad</li>
-        <li class="card-text">Enter the code from the map</li>
-        </ul>
+        <ol>
+          <li class="card-text">Locate each bunker keypad</li>
+          <li class="card-text">Enter the code from the map</li>
+        </ol>
       </div>
     </div>
 
@@ -152,13 +140,13 @@
 
   <div id="redCards" style="display: none;">
 
-    <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
       <h5 class="card-header">Red Access Cards</h5>
       <div class="card-body">
-        <ul>
+        <ol>
           <li class="card-text">Locate a Red Access Card from a random loot drop</li>
           <li class="card-text">Go to a marked map location to access the bunker</li>
-        </ul>
+        </ol>
       </div>
     </div>
 
@@ -170,14 +158,14 @@
 
   <div id="computers" style="display: none;">
 
-    <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
       <h5 class="card-header">Computers</h5>
       <div class="card-body">
         <p class="card-text">Easter egg is currently unsolved</p>
-        <ul>
+        <ol>
           <li class="card-text">Locate the computers around the map</li>
           <li class="card-text">Interact with them to "Enter Password"</li>
-        </ul>
+        </ol>
       </div>
     </div>
 
@@ -185,65 +173,143 @@
 
   </div>
 
+  <div id="secretStation" style="display: none;">
+
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+      <h5 class="card-header">Secret Station</h5>
+      <div class="card-body">
+        <ol>
+          <li class="card-text">Travel to the marked #1 building on the map</li>
+          <li class="card-text">Interact with the keypad and enter "<strong>2179</strong>"</li>
+          <li class="card-text">Interact with the computer</li>
+          <li class="card-text">Write down each photo tag (and differential if there)</li>
+          <li class="card-text">Note the Roman Numeral under the painting, then add/subtract the differential to decipher the code</li>
+          <li class="card-text">Interact with the computer again to enter the top halves, then bottom halves of the code</li>
+          <li class="card-text">Travel to the marked #2 tunnel on the map</li>
+          <li class="card-text">Interact with the computer, get on the subway</li>
+        </ol>
+      </div>
+    </div>
+
+    <br>
+
+    <img src="img/romanNumerals.jpg" height="auto" width="500px" style="border: 1px solid black; position: fixed; right: 0; bottom: 0;"/>
+
+    <div id="paintings" style="width: 500px;">
+
+      <div class="container">
+
+        <div class="col">
+
+          <div class="row">
+            <div>
+              <span style="color: white; background-color: black;">Arch</span><br>
+              <img src="img/paintingArch.jpg" height="125" width="auto"/>
+            </div>
+            <div>
+              <span style="color: white; background-color: black;">Bag</span><br>
+              <img src="img/paintingBag.jpg" height="125" width="auto"/>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <span style="color: white; background-color: black;">Beard</span><br>
+              <img src="img/paintingBeard.jpg" height="125" width="auto"/>
+            </div>
+            <div>
+              <span style="color: white; background-color: black;">Medal</span><br>
+              <img src="img/paintingMedal.jpg" height="125" width="auto"/>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <span style="color: white; background-color: black;">Monument</span><br>
+              <img src="img/paintingMonument.jpg" height="125" width="auto"/>
+            </div>
+            <div>
+              <span style="color: white; background-color: black;">Mountain</span><br>
+              <img src="img/paintingMountain.jpg" height="125" width="auto"/>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <span style="color: white; background-color: black;">Shoulder</span><br>
+              <img src="img/paintingShoulder.jpg" height="125" width="auto"/>
+            </div>
+            <div>
+              <span style="color: white; background-color: black;">Steeple</span><br>
+              <img src="img/paintingSteeple.jpg" height="125" width="auto"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-<div style="position: fixed; left: 25px;">
-  <span style="color: white;">by DestrucSean</span>
-  <br>
-  <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank" style="color: yellow;" onclick="notify('Thanks :)', 'Happy Easter Egg Hunting!')">Get Lights, Camera, Reaction! on Steam</a>
-</div>
+  <div style="position: fixed; left: 25px;">
+    <span style="color: white;">by DestrucSean</span>
+    <br>
+    <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank"
+       style="color: yellow;" onclick="notify('Thanks :)', 'Happy Easter Egg Hunting!')">Get Lights, Camera,
+      Reaction!
+      on Steam</a>
+  </div>
 
-<div id="notify" style="position: fixed; right: 0; top: 0; margin: 25px;" hidden class="alert alert-dark" role="alert">
+  <div id="notify" style="position: fixed; right: 0; top: 0; margin: 25px;" hidden class="alert alert-dark"
+       role="alert">
 
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('notify').setAttribute('hidden', hidden)">
-    <span aria-hidden="true">&times;</span>
-  </button>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+            onclick="document.getElementById('notify').setAttribute('hidden', hidden)">
+      <span aria-hidden="true">&times;</span>
+    </button>
 
-  <div id="notifyBold" style="font-weight: bold;"></div>
-  <div id="notifyText1"></div>
-  <a id="notifyLink" href="" target="_blank"></a>
-  <div id="notifyText2"></div>
+    <div id="notifyBold" style="font-weight: bold;"></div>
+    <div id="notifyText1"></div>
+    <a id="notifyLink" href="" target="_blank"></a>
+    <div id="notifyText2"></div>
 
-</div>
+  </div>
 
-<script>
+  <script>
 
-  function playAudio(num) {
-    var audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.setAttribute('src', 'audio/' + num.toString() + '.mp3');
-    audioPlayer.play();
-  }
+    function playAudio(num) {
+      var audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.setAttribute('src', 'audio/' + num.toString() + '.mp3');
+      audioPlayer.play();
+    }
 
-  function setMap(map, mapBkg) {
-    var bunkers11 = document.getElementById('bunker11');
-    var keypads = document.getElementById('keypads');
-    var redCards = document.getElementById('redCards');
-    var computers = document.getElementById('computers');
-    var bkg = document.getElementById('map');
+    function setMap(map, mapBkg) {
+      var bunkers11 = document.getElementById('bunker11');
+      var keypads = document.getElementById('keypads');
+      var redCards = document.getElementById('redCards');
+      var computers = document.getElementById('computers');
+      var secretStation = document.getElementById('secretStation');
+      var bkg = document.getElementById('map');
 
-    bunkers11.style.display = 'none';
-    keypads.style.display = 'none';
-    redCards.style.display = 'none';
-    computers.style.display = 'none';
+      bunkers11.style.display = 'none';
+      keypads.style.display = 'none';
+      redCards.style.display = 'none';
+      computers.style.display = 'none';
+      secretStation.style.display = 'none';
 
-    map.style.display = "block";
-    bkg.setAttribute('src', mapBkg);
-  }
+      map.style.display = "block";
+      bkg.setAttribute('src', mapBkg);
+    }
 
-  function notify (msgBold, msgText1, msgLinkUrl, msgLinkText, msgText2) {
-    document.getElementById('notify').removeAttribute('hidden');
-    document.getElementById('notifyBold').textContent = msgBold;
-    document.getElementById('notifyText1').textContent = msgText1;
-    document.getElementById('notifyLink').setAttribute('href', msgLinkUrl);
-    document.getElementById('notifyLink').textContent = msgLinkText;
-    document.getElementById('notifyText2').textContent = msgText2;
-  }
+    function notify(msgBold, msgText1, msgLinkUrl, msgLinkText, msgText2) {
+      document.getElementById('notify').removeAttribute('hidden');
+      document.getElementById('notifyBold').textContent = msgBold;
+      document.getElementById('notifyText1').textContent = msgText1;
+      document.getElementById('notifyLink').setAttribute('href', msgLinkUrl);
+      document.getElementById('notifyLink').textContent = msgLinkText;
+      document.getElementById('notifyText2').textContent = msgText2;
+    }
 
-</script>
+  </script>
 
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
