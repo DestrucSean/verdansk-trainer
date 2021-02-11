@@ -293,7 +293,7 @@
           <br>
 
           <h5 style="color: white;">2) Select Adjustment Number Order</h5>
-          <div class="row">
+          <div id="adjOrderSelect" class="row">
             <div>
               <span style="font-size: 30px; color: white; margin: 10px;" onclick="addAdj(-3)">-3</span>
             </div>
@@ -320,7 +320,7 @@
           <br>
 
           <h5 style="color: white;">3) Select Roman Numeral Order</h5>
-          <div class="row">
+          <div id="romanNumeralOrder" class="row" hidden>
             <div>
               <span style="font-size: 20px; color: white; margin: 5px;" onclick="addNum(1)">I(1)</span>
             </div>
@@ -394,6 +394,7 @@
 </div>
 
 <div style="position: fixed; bottom: 5px; right: 25px;">
+
   <span style="color: white;">by DestrucSean</span>
   <br>
   <a href="https://store.steampowered.com/app/1222000/Lights_Camera_Reaction/" target="_blank"
@@ -418,6 +419,9 @@
 </div>
 
 <script>
+
+  document.getElementById('codeOrder').addEventListener('change', clearStrikeVal);
+  document.getElementById('adjOrderSelect').addEventListener('click', toggleNumerals);
 
   function playAudio(num) {
     var audioPlayer = document.getElementById('audioPlayer');
@@ -482,6 +486,14 @@
         document.getElementById('codeNum' + i).remove();
       }
 
+      if (document.getElementById('codeNumStrikeValue') !== null) {
+
+        document.getElementById('codeNumStrikeValue').textContent = "";
+
+      }
+
+      document.getElementById('romanNumeralOrder').setAttribute('hidden', 'hidden');
+
     }
 
     document.getElementById('imgHeader').style.display = "none";
@@ -489,7 +501,21 @@
     document.getElementById('numHeader').style.display = "none";
     document.getElementById('codeHeader').style.display = "none";
     document.getElementById('codeNumStrike').style.display = "none";
-    
+
+  }
+
+  function clearStrikeVal() {
+    if (document.getElementById('codeNum4') === null) {
+      document.getElementById('codeNumStrike').style.display = "none";
+    }
+  }
+
+  function toggleNumerals() {
+    if (document.getElementById('copyAdj4') !== null) {
+      document.getElementById('romanNumeralOrder').removeAttribute('hidden');
+    } else {
+      document.getElementById('romanNumeralOrder').setAttribute('hidden', 'hidden');
+    }
   }
 
   function addPainting(img) {
